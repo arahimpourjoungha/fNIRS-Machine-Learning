@@ -1,0 +1,25 @@
+%   Ch_near   |   Ch_far   |
+%---------------------------
+%  730 | 850  | 730 | 850  |
+%%  --------------------
+%   Intensities read
+%%  --------------------
+clc; close all; clear all;
+%addpath C:\Users\Nima\Desktop\fNIRS_New_Data
+%addpath H:\Tepid_Ice_Water(26.11.2014)\Nima_hemmati
+%addpath C:\Users\User\Desktop\EMBC DATA\Sahar
+Data_730a=importdata('Data_730a.txt');
+Data_850a=importdata('Data_850a.txt');
+Data_730b=importdata('Data_730b.txt');
+Data_850b=importdata('Data_850b.txt');
+%file_name = 'Output_file.xlsx';
+%Intensity = xlsread(file_name);
+Intensity(:,1) = Data_730b(:,1);
+Intensity(:,2) = Data_850b(:,1);
+Intensity(:,3) = Data_730b(:,2);
+Intensity(:,4) = Data_850b(:,2);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+I_near_730 = Intensity(:,1);
+I_near_850 = Intensity(:,2);
+I_far_730  = Intensity(:,3);
+I_far_850  = Intensity(:,4); 
