@@ -1,0 +1,27 @@
+Wn = [12.5/(64) 31/(64)];
+
+[B,A] = butter(20,Wn,'bandpass');
+
+Filtered_Data = filter(B,A, AF3);
+
+Data= fft(Filtered_Data);
+
+Data3=abs(Data);
+
+a=0:128/length(Data3):64;
+
+%plot(a(2:size(a,2)),Data3(1:length(Data3)/2));
+
+
+
+
+f11=var(Data3)
+
+f12=var (Filtered_Data)
+
+%plot(Filtered_Data)
+
+
+
+
+%AF3,AF4,F3,F4
